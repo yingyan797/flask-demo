@@ -1,0 +1,20 @@
+<head>
+    <title>flask demo</title>
+</head>
+<body>
+    <h2 style="background-color: lightgreen;">Demo web application: calculator</h2>
+
+    <form action="/" method="post">
+        <input type="number" name="n1">
+        <select name="operator">
+            <option value="+">+ (plus)</option>
+            <option value="-">- (minus)</option>
+            <option value="*">* (multiply)</option>
+            <option value="/">/ (divide)</option>
+        </select> 
+        <input type="number" name="n2"> <br><br>
+        <input type="submit" name="calculate" value="Calculate result"> <br>
+        <textarea rows="2" cols="30" readonly style="background-color: azure;">{{result}}</textarea>
+    </form>
+    
+</body>
