@@ -18,8 +18,12 @@ def index():
             case "*":
                 result = float(n1) * float(n2)
             case "/":
-                result = float(n1) / float(n2)
-    return render_template("index.html", result=f"{n1} {op} {n2} = {result}")
+                if float(n2) == 0:
+                    result = "Can't divide by zero"
+                else:
+                    result = float(n1) / float(n2)
+        result = f"{n1} {op} {n2} = {result}"
+    return render_template("index.html", result=result)
 
 if __name__ == "__main__":
     app.run("0.0.0.0", 5000, debug=True)
