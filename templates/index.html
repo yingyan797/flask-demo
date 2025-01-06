@@ -2,7 +2,7 @@
     <title>flask demo</title>
 </head>
 <body>
-    <h2 style="background-color: lightgreen;">Demo web application: calculator</h2>
+    <h1 style="background-color: lightgreen;">Demo web application: calculator</h1>
 
     <form action="/" method="post">
         <input type="number" name="n1">
@@ -15,6 +15,18 @@
         <input type="number" name="n2"> <br><br>
         <input type="submit" name="calculate" value="Calculate result"> <br>
         <textarea rows="3" cols="50" readonly style="background-color: azure;">{{result}}</textarea>
+        <br>
+
+        <p>Checkbox input</p>
+        <input type="checkbox" name="check1"> option 1
+        <input type="checkbox" name="check2"> option 2
+        <input type="checkbox" name="check3"> option 3
+        <p>Radio input: do you like python?</p>
+        <input type="radio" name="likepython" value="yes"> Yes I do
+        <input type="radio" name="likepython" value="no"> No I don't
+        <input type="radio" name="likepython" value="neutral"> Not sure
+        <br>
+        <textarea readonly>My degree of enjoying Python is {{like}}</textarea>
     </form>
     
 </body>
