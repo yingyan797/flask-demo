@@ -39,8 +39,8 @@ if __name__ == "__main__":
                            ]:
         db(f"insert into employee (name, department, years, salary) values ('{en}', '{ed}', {ey}, {es})")
     
-    for dn, dl, dc in [("Engineering", 2, 20), 
-                       ("Marketing", 1, 15)]:
+    for dn, dl, dc in [("Engineering", 205, 20), 
+                       ("Marketing", 101, 15)]:
         db(f"insert into department (name, location, capacity) values ('{dn}', '{dl}', {dc})")
     
     # Show table content
@@ -55,7 +55,6 @@ if __name__ == "__main__":
     # Show table content after change, matching conditions
     print(db("select name, salary from employee").fetchall())
     print(db("select name, salary from employee where years > 3").fetchall())
+    print("Left join table:", db("select employee.name, department.location, salary from employee left join department on employee.department = department.name").fetchall())
 
-    
     # db.con.commit()
-    # print(db("select * from employee left join department on employee.department = department.name").fetchall())
