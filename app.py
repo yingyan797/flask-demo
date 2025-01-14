@@ -36,5 +36,9 @@ def index():
 
     return render_template("index.html", result=result, like=like_python)
 
+@app.route("/database", methods=["get", "post"]) 
+def database(): 
+    return render_template("database.html")
+
 if __name__ == "__main__":
     app.run("0.0.0.0", 5000, debug=True)
