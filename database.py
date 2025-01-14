@@ -41,7 +41,7 @@ if __name__ == "__main__":
     
     for dn, dl, dc in [("Engineering", 205, 20), 
                        ("Marketing", 101, 15)]:
-        db(f"insert into department (name, location, capacity) values ('{dn}', '{dl}', {dc})")
+        db(f"insert into department (name, location, capacity) values ('{dn}', {dl}, {dc})")
     
     # Show table content
     print(db("select name, salary from employee").fetchall())
